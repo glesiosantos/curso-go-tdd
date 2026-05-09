@@ -4,11 +4,24 @@ import (
   "testing"
 )
 
-func OlaTest(t *testing.T) {
-  resultado := Ola()
-  esperado := "Olá Mundo"
+func TestOla(t *testing.T) {
 
-  if resultado != esperado {
-    t.Errorf("resultado %q, esperado %q", resultado, esperado)
-  }
+  t.Run("diz olá quando as pessoas informar os nome", func(t *testing.T){
+    resultado := Ola("Glêsio")
+    esperado  := "Olá, Glêsio"
+    
+    if resultado != esperado {
+      t.Errorf("resultado %q, esperado %q", resultado, esperado)
+    }
+  })
+
+  t.Run("deverá diz 'Olá Mundo' quando nome não for informado", func(t *testing.T){
+    resultado := Ola()
+    esperado  := "Olá, Mundo"
+
+    if resultado != esperado {
+      t.Errorf("resultado %q, esperado %q", resultado, esperado)
+    }
+  })
+
 }
