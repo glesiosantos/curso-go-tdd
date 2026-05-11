@@ -11,16 +11,16 @@ func TestOla(t *testing.T) {
     esperado  := "Olá, Glêsio"
     
     if resultado != esperado {
-      t.Errorf("resultado %q, esperado %q", resultado, esperado)
+      t.Errorf("resultado %s, esperado %s", resultado, esperado)
     }
   })
 
   t.Run("deverá diz 'Olá Mundo' quando nome não for informado", func(t *testing.T){
-    resultado := Ola()
+    resultado := Ola("")
     esperado  := "Olá, Mundo"
 
     if resultado != esperado {
-      t.Errorf("resultado %q, esperado %q", resultado, esperado)
+      t.Errorf("resultado %s, esperado %s", resultado, esperado)
     }
   })
 
