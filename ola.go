@@ -4,6 +4,8 @@ import (
   "fmt"
 )
 
+const espanhol = "espanhol"
+const prefixoOlaEspanhol = "Hola, "
 const prefixoOlaPortugues = "Olá, "
 
 func Ola(nome string, idioma string) string {
@@ -12,8 +14,8 @@ func Ola(nome string, idioma string) string {
     nome = "Mundo"
   }
 
-	if idioma == "espanhol" {
-		return "Hola, "+ nome
+	if idioma == espanhol {
+		return prefixoOlaEspanhol + nome
 	}
 
   return prefixoOlaPortugues + nome
