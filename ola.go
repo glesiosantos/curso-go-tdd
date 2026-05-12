@@ -18,6 +18,10 @@ func Ola(nome string, idioma string) string {
 		return prefixoOlaEspanhol + nome
 	}
 
+	if idioma == "frances" {
+		return "Bonjour, "+ nome
+	}
+
   return prefixoOlaPortugues + nome
 }
 
